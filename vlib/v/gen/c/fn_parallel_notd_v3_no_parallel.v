@@ -277,7 +277,7 @@ $if !windows {
 		worker.tmp_count = g.tmp_count
 		// emit_const resolves file-local import aliases in the declaring file;
 		// body workers never need that table, so the fork does not carry it.
-		worker.const_files = g.const_files
+		worker.const_files = g.const_files.clone()
 		const_code := worker.precompute_consts_in_order(names)
 		cgen_worker_scope_leave(scope)
 		g.parallel_const_code = const_code.clone()
