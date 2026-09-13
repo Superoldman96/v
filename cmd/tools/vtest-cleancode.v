@@ -90,8 +90,7 @@ fn v_test_vetting(vargs string) ! {
 	vet_known_exceptions = vet_known_exceptions.map(os.abs_path(os.join_path(vroot, it)))
 	expanded_vet_list :=
 		(util.find_all_v_files(vet_folders)!).filter(os.abs_path(it) !in vet_known_exceptions)
-	vet_session := tsession(vargs, 'vvet', '${os.quoted_path(vexe)} vet', 'vet', expanded_vet_list,
-		vet_known_exceptions)
+	vet_session := tsession(vargs, 'vvet', '${os.quoted_path(vexe)} vet', 'vet', expanded_vet_list, vet_known_exceptions)
 
 	fmt_cmd, fmt_args := if is_fix {
 		'${os.quoted_path(vexe)} fmt -w', 'fmt -w'

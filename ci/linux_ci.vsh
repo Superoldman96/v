@@ -297,10 +297,8 @@ fn build_modules_gcc() {
 	exec('v build-module vlib/math')
 	exec('v build-module vlib/strings')
 	exec('v build-module vlib/v/token')
-	exec('v build-module vlib/v/ast')
 	exec('v build-module vlib/v/parser')
 	exec('v build-module vlib/v/gen/c')
-	exec('v build-module vlib/v/depgraph')
 	exec('v build-module vlib/os/cmdline')
 }
 
@@ -409,10 +407,8 @@ fn build_modules_clang() {
 	exec('v build-module vlib/math')
 	exec('v build-module vlib/strings')
 	exec('v build-module vlib/v/token')
-	exec('v build-module vlib/v/ast')
 	exec('v build-module vlib/v/parser')
 	exec('v build-module vlib/v/gen/c')
-	exec('v build-module vlib/v/depgraph')
 	exec('v build-module vlib/os/cmdline')
 }
 

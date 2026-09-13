@@ -33,7 +33,7 @@ fn v_files() []string {
 	mut files_that_can_be_formatted := []string{}
 	all_test_files := os.walk_ext('.', '.v')
 	for tfile in all_test_files {
-		if tfile.starts_with('./vlib/v/cgen/tests') {
+		if tfile.starts_with('./vlib/v/gen/c/testdata') {
 			continue
 		}
 		if tfile.ends_with('graceful_shutdown_test.v') {

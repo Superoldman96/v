@@ -46,7 +46,6 @@ on:
       - 'vlib/time/**'
       - 'vlib/toml/**'
       - 'vlib/v/**'
-      - 'vlib/v3/**'
       # build-examples / DB / Sokol deps exercised by ci/openbsd_ci.vsh
       - 'vlib/compress/**'
       - 'vlib/crypto/rand/**'
